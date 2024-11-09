@@ -1,49 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .touch-target {
+      @apply min-h-[48px] min-w-[48px];
+    }
+} 
+
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
 :root {
-  font-family: "Poppins", serif;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+    font-family: "Poppins", sans-serif;
+    background-color: #020305;
 }
 
-
-.grad {
-  background: -webkit-linear-gradient(#00FFFF, #0CB2B2, #166969);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
 body {
-  @apply min-w-[320px] min-h-[100vh] m-0;
+    @apply min-w-[320px] min-h-[100vh] m-0;
 }
 
-h1 {
-  @apply text-[3.2em];
-}
-
-p {
-  @apply text-xl
-}
-
-button {
-  @apply transition-all duration-300 font-bold rounded-md border-gray-800 border-[1px] p-3 hover:bg-gray-800
-}
-
-
-.lang-logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.ts {
-  @apply text-[#007ACC] font-bold;
-}
-
-.react {
-  @apply text-[#00D8FF] font-bold;
+.grad {
+    background: linear-gradient(90deg, #00FFFF, #0CB2B2, #166969);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
