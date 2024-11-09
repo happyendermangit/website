@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Mail, ChevronDown, Menu, X } from 'lucide-react';
-// Import your logo assets
 import reactLogo from './assets/react.svg';
 import typescriptLogo from './assets/ts.svg';
 import honoLogo from './assets/hono.svg';
 import discordLogo from './assets/discord.svg';
 
-// Components remain the same...
 function SkillCard({ skill }) {
     return (
         <div className="group flex items-center bg-gray-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-gray-700/50 w-full sm:min-w-[240px] sm:max-w-[240px] transition-all duration-500 hover:scale-105 hover:border-cyan-500/50">
@@ -100,13 +98,11 @@ function App() {
     return (
         <div className="min-h-screen">
             <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
-                {/* Fixed navigation wrapper */}
                 <div className={`fixed inset-0 z-50 pointer-events-none ${mobileMenuOpen ? 'h-full' : 'h-auto'}`}>
                     <nav className={`w-full pointer-events-auto transition-all duration-300 py-4 ${isScrolled ? 'bg-gray-900/80 backdrop-blur-lg shadow-lg' : ''}`}>
                         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
                             <span className="text-lg sm:text-xl font-bold text-white">Wave Dev</span>
                             
-                            {/* Desktop Navigation */}
                             <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
                                 {['about', 'skills', 'projects', 'contact'].map((section) => (
                                     <li key={section}>
@@ -120,7 +116,6 @@ function App() {
                                 ))}
                             </ul>
 
-                            {/* Mobile Menu Button */}
                             <button
                                 className="md:hidden p-2 text-gray-400 hover:text-white transition-colors duration-300"
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -137,7 +132,6 @@ function App() {
                             </button>
                         </div>
 
-                        {/* Mobile Navigation */}
                         <div 
                             className={`md:hidden fixed inset-x-0 bottom-0 pointer-events-auto bg-gray-900/95 backdrop-blur-lg transition-all duration-300 ease-in-out ${
                                 mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
@@ -170,7 +164,6 @@ function App() {
                     </nav>
                 </div>
 
-                {/* Rest of the content remains the same... */}
                 <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32">
                     <header className="min-h-[60vh] sm:min-h-[70vh] flex flex-col items-center justify-center text-center">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">
@@ -182,7 +175,6 @@ function App() {
                         <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 mt-12 sm:mt-16 animate-bounce text-gray-400" />
                     </header>
 
-                    {/* Sections remain the same... */}
                     <section id="about" className="py-16 sm:py-20 min-h-screen flex flex-col items-center justify-center">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-white">About Me</h2>
                         <p className="text-lg sm:text-xl text-gray-400 max-w-2xl text-center px-4">
